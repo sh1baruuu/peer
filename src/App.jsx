@@ -110,7 +110,7 @@ function App() {
     const seconds = time % 60;
 
     return (
-        <div className="flex flex-col h-screen w-screen justify-center overflow-hidden items-center  bg-white-100 select-none">
+        <div className="flex flex-col h-screen w-screen justify-center overflow-hidden items-center bg-white-100 select-none">
             <Modal
                 tenzies={tenzies}
                 onClick={newGame}
@@ -124,14 +124,15 @@ function App() {
             <DiceContainer>{diceElements}</DiceContainer>
             {!tenzies &&
                 (isRunning ? (
-                    <>
                         <PlayButton onClick={rollDice} icon={faDice} />
-                        <ResetButton onClick={resetGame} />
-                    </>
+
                 ) : (
                     <PlayButton onClick={startGame} icon={faPlay} />
                 ))}
-            <div className="absolute overflow-hidden text-xs font-medium  h-5 flex justify-center items-center bottom-0 w-screen right-0 ">
+            <div className="w-screen h-screen absolute flex z-[1] items-end">
+
+            <div className=" overflow-hidden text-xs font-medium  h-5 flex justify-center items-center bottom-0 w-screen right-0 ">
+            {isRunning && <ResetButton onClick={resetGame} />}
                 © 2023 Tenzies by{" "}
                 <a
                     href="https://github.com/sh1baruuu/"
@@ -142,6 +143,7 @@ function App() {
                     shibaruuu
                 </a>
                 . All rights reserved.
+            </div>
             </div>
         </div>
     );

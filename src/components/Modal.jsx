@@ -46,7 +46,7 @@ function Modal({ onClick, time, minutes, seconds, tenzies }) {
                         <h1 className="font-bold lg:my-3 mt-2 text-xl lg:text-[2rem] ">
                             Your Time!
                         </h1>
-                        <h3 className="mt-3 lg:mb-auto mb-5 bg-blue-300 px-2 rounded-l-full rounded-r-full font-bold text-lg">
+                        <h3 className="mt-3 lg:mb-auto mb-5 bg-blue-200 px-3 rounded-l-full rounded-r-full font-bold text-lg">
                             <FontAwesomeIcon
                                 icon={faClock}
                                 className="mr-[5px]"
