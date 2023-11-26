@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
 import { faRotateRight as reset } from "@fortawesome/free-solid-svg-icons";
 
 function ResetButton({ onClick }) {

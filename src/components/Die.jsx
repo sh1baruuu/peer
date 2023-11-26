@@ -12,7 +12,7 @@ export default function Die(props) {
 
     return (
         <div 
-            className="lg:h-[70px] lg:w-[70px] bg-green md:h-[3rem] md:gap-5 h-[2.6rem] w-fit flex justify-content rounded-lg shadow-lg items-center active:scale-75" 
+            className="lg:h-[70px] cursor-pointer lg:w-[70px] bg-green md:h-[3rem] md:gap-5 h-[2.6rem] w-fit flex justify-content rounded-lg shadow-lg items-center active:scale-75" 
             style={dieIsHeldBackground}
             onClick={props.holdDice}
         >
