@@ -28,7 +28,7 @@ function Modal({ onClick, time, minutes, seconds, tenzies }) {
             <FontAwesomeIcon
                 icon={start}
                 size="2xl"
-                className="text-[3.8rem]"
+                className="lg:text-[3.8rem] text-[3rem]"
                 key={id}
             />
         );
@@ -37,16 +37,16 @@ function Modal({ onClick, time, minutes, seconds, tenzies }) {
     if (tenzies)
         return (
             <>
-                <div className="flex justify-center items-center bg-black/50 absolute w-screen z-40 h-screen backdrop-blur-sm">
+                <div className="flex justify-center items-center  bg-black/50 absolute w-screen z-40 h-screen backdrop-blur-sm">
                 <Confetti />
-                    <div className="flex flex-col pt-10 px-5 pb-5 rounded-lg items-center z-20 bg-white-100 w-[400px] h-[390px]">
-                        <div className="mt-3 mb-4  [&>*:nth-child(2)]:mx-[10px] [&>*:first-child]:text-[3rem]  text-yellow hover:shadow-none [&>*:last-child]:translate-y-[10px] [&>*:first-child]:translate-y-[10px] [&>*:last-child]:text-[3rem]">
+                    <div className="flex shadow-inner flex-col pt-10 px-5 pb-5 rounded-lg items-center z-20 bg-white-100 w-10/12 h-fit lg:w-[400px] lg:h-[390px]">
+                        <div className="lg:mt-3 mb-4  [&>*:nth-child(2)]:mx-[10px] lg:[&>*:first-child]:text-[3rem] [&>*:first-child]:text-[2.5rem] text-yellow hover:shadow-none [&>*:last-child]:translate-y-[10px] [&>*:first-child]:translate-y-[10px] lg:[&>*:last-child]:text-[3rem] [&>*:last-child]:text-[2.5rem]">
                             {getStarRating}
                         </div>
-                        <h1 className="font-bold my-3 text-[2rem] ">
+                        <h1 className="font-bold lg:my-3 mt-2 text-xl lg:text-[2rem] ">
                             Your Time!
                         </h1>
-                        <h3 className="mt-3 mb-auto font-bold text-lg">
+                        <h3 className="mt-3 lg:mb-auto mb-5 bg-blue-300 px-2 rounded-l-full rounded-r-full font-bold text-lg">
                             <FontAwesomeIcon
                                 icon={faClock}
                                 className="mr-[5px]"

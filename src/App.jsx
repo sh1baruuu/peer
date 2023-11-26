@@ -62,14 +62,13 @@ function App() {
         new Audio(click2).play();
     };
 
-    
     const newGame = () => {
-        setTenzies(false)
-        setTime(0)
-        setDice(allNewDice())
-        setIsRunning(false)
-        new Audio(click2).play()
-    }
+        setTenzies(false);
+        setTime(0);
+        setDice(allNewDice());
+        setIsRunning(false);
+        new Audio(click2).play();
+    };
 
     const rollDice = () => {
         setDice((oldDice) =>
@@ -111,9 +110,14 @@ function App() {
     const seconds = time % 60;
 
     return (
-        <div className="flex flex-col h-screen w-screen justify-center items-center  bg-white-100 select-none">
-            
-            <Modal tenzies={tenzies} onClick={newGame} time={time} minutes={minutes} seconds={seconds}  />
+        <div className="flex flex-col h-screen w-screen justify-center overflow-hidden items-center  bg-white-100 select-none">
+            <Modal
+                tenzies={tenzies}
+                onClick={newGame}
+                time={time}
+                minutes={minutes}
+                seconds={seconds}
+            />
             <Header>
                 <Timer minutes={minutes} seconds={seconds} run={isRunning} />
             </Header>
@@ -127,6 +131,18 @@ function App() {
                 ) : (
                     <PlayButton onClick={startGame} icon={faPlay} />
                 ))}
+            <div className="absolute overflow-hidden text-xs font-medium  h-5 flex justify-center items-center bottom-0 w-screen right-0 ">
+                © 2023 Tenzies by{" "}
+                <a
+                    href="https://github.com/sh1baruuu/"
+                    target="blank"
+                    className="hover:text-blue-600 text-slate-800 pl-1 cursor-pointer hover:font-bold"
+                >
+                    {" "}
+                    shibaruuu
+                </a>
+                . All rights reserved.
+            </div>
         </div>
     );
 }
